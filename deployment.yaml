@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: kush233/draw-frontend:c436375d9e3de39d0cfd9d73b19c3699a0a5319d
+          image: kush233/draw-frontend:c46dfbc978929d887f47e09d38eaa516f511b1a7
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
