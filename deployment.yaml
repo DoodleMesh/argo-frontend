@@ -18,6 +18,13 @@ spec:
         - name: frontend
           image: kush233/draw-frontend:d4bf8c077d2f2a5e10b5e7c0d1352b7f2438329e
           imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
           ports:
             - containerPort: 3000
           env:
