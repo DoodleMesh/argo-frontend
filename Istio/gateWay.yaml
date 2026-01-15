@@ -15,7 +15,7 @@ spec:
         - draw.kushan23.com
         - brain.kushan23.com
       tls:
-        httpsRedirect: true
+        httpsRedirect: false
     - port:
         number: 443
         name: https
