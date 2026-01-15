@@ -6,9 +6,18 @@ metadata:
 spec:
   hosts:
     - draw.kushan23.com
+    - brain.kushan23.com
   gateways:
     - istio-system/platform-gateway
   http:
+    - match:
+        - uri:
+            prefix: /.well-known/acme-challenge/
+      route:
+        - destination:
+            host: istio-ingressgateway.istio-system.svc.cluster.local
+            port:
+              number: 80
     - match:
         - uri:
             prefix: /
