@@ -5,7 +5,7 @@ metadata:
   labels:
     app: frontend
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: frontend
@@ -29,6 +29,6 @@ spec:
             - containerPort: 3000
           env:
             - name: NEXT_PUBLIC_BACKEND_URL
-              value: "http://backend.default.svc.cluster.local"
+              value: "http://backend.doodlemesh.svc.cluster.local"
             - name: NEXT_PUBLIC_WS_URL
-              value: "ws://wsbackend.default.svc.cluster.local"
+              value: "ws://wsbackend.doodlemesh.svc.cluster.local"

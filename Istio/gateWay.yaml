@@ -2,6 +2,7 @@ apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
   name: ingress-gateway
+  namespace: istio-system
 spec:
   selector:
     istio: ingressgateway  
@@ -11,9 +12,12 @@ spec:
         name: https
         protocol: HTTPS
       hosts:
-      - "draw.kushan23.com"
-      - "brain.kushan23.com"
-      - port:
+        - "draw.kushan23.com"
+        - "brain.kushan23.com"
+      tls:
+        mode: SIMPLE
+        credentialName: draw-kushan23-cert-tls
+    - port:
         number: 80
         name: http
         protocol: HTTP
@@ -21,5 +25,4 @@ spec:
         - "draw.kushan23.com"
         - "brain.kushan23.com"
       tls:
-        mode: SIMPLE
-        credentialName: draw-kushan23-cert-tls
+        httpsRedirect: true
