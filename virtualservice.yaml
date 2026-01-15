@@ -23,6 +23,6 @@ spec:
             prefix: /
       route:
         - destination:
-            host: frontend
+            host: frontend.doodlemesh.svc.cluster.local
             port:
               number: 80
