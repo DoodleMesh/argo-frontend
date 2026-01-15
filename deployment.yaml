@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: kush233/draw-frontend:d4bf8c077d2f2a5e10b5e7c0d1352b7f2438329e
+          image: kush233/draw-frontend:db476a01d4ebe662fd7b365a5c4002bce4d31fff
           imagePullPolicy: Always
           resources:
             requests:
